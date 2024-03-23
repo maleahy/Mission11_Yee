@@ -11,7 +11,7 @@
     <h4 class="text-center">Spencer Hilton's Favorite Books</h4>
 </div>
 <table class="table table-bordered">
-    <thead>
+    <thead> @* headers *@
         <tr>
             <th>Title</th>
             <th>Author</th>
@@ -22,8 +22,9 @@
             <th>Price</th>
         </tr>
     </thead>
+    @* data *@
     <tbody>
-        @foreach (var book in Model.Books)
+        @foreach (var book in Model.Books) @* go through Books model *@
         {
             <tr>
                 <td>@book.Title</td>
@@ -39,7 +40,7 @@
 </table>
 
 @* pagination *@
-@if (Model.PagingInfo.TotalPages > 1)
+@if (Model.PagingInfo.TotalPages > 1) @* only show page nav if needed *@
 {
     <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center">
