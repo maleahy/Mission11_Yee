@@ -15,7 +15,7 @@ namespace Mission11_Yee.Controllers
 
         public IActionResult Index(int page = 1)
         {
-            int pageSize = 10; // Set the number of items you want per page
+            int pageSize = 10; // Set the number of items per page
             var books = _repo.Books;
 
             var pagingInfo = new PagingInfo
